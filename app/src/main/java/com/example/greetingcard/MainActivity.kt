@@ -18,7 +18,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.Surface
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
+import android.content.Intent
+import android.content.Intent.ACTION_VIEW
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +36,13 @@ class MainActivity : ComponentActivity() {
                     
                 }
             }
+
+        }
+        val toThird: Button = findViewById(R.id.third)
+        toThird.setOnClickListener {
+            val startIntent = Intent(ACTION_VIEW)
+            startActivity(startIntent)
+
         }
     }
 }
